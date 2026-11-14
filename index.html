@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#12141c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dashboard">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Dashboard</title>
+<style>
+:root{
+  --bg:#12141c; --side:#171a24; --card:#1d212d; --card-h:#232837; --line:#2a3040;
+  --text:#eef0f6; --mute:#8b93a7; --accent:#7084ff; --accent-bg:rgba(112,132,255,.14);
+  --up:#2ed3a0; --down:#ff6b7a; --warn:#f5b84b;
+  --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font:13px/1.4 var(--font);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+.app{display:grid;grid-template-columns:200px 1fr;min-height:100%}
+.sidebar{position:sticky;top:0;height:100vh;background:var(--side);border-right:1px solid var(--line);padding:16px 10px;display:flex;flex-direction:column;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;padding:0 10px;font-weight:650;font-size:16px;letter-spacing:-.01em}
+.brand i{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,#7084ff,#9b6bff)}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav button{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:8px;color:var(--mute);text-align:left;transition:background .15s,color .15s}
+.nav button:hover{background:var(--card);color:var(--text)}
+.nav button.active{background:var(--accent-bg);color:var(--accent)}
+.nav .soon{margin-left:auto;font-size:11px;color:var(--mute);border:1px solid var(--line);border-radius:6px;padding:0 6px}
+
+.main{padding:calc(20px + env(safe-area-inset-top,0px)) clamp(14px,3vw,32px) 32px;min-width:0}
+.page{max-width:1120px;margin:0 auto}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+h1{font-size:18px;font-weight:650;letter-spacing:-.02em}
+
+.total{background:linear-gradient(160deg,#242a3d,#1d212d);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:12px}
+.total small{color:var(--mute)}
+.total .sum{font-size:clamp(24px,5vw,30px);font-weight:700;letter-spacing:-.03em;margin:2px 0 4px;font-variant-numeric:tabular-nums}
+.total .row{display:flex;gap:16px;flex-wrap:wrap;color:var(--mute)}
+
+.bar{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:8px;background:var(--card);border:1px solid var(--line);transition:background .15s}
+.btn:hover{background:var(--card-h)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:550}
+.btn.primary:hover{background:#8394ff}
+.btn[disabled]{opacity:.6;cursor:default}
+.btn svg{width:16px;height:16px}
+.spin svg{animation:rot .8s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.upd{margin-left:auto;color:var(--mute);font-size:12px}
+
+.banner{background:rgba(255,107,122,.1);border:1px solid rgba(255,107,122,.35);color:#ffb0b8;border-radius:12px;padding:10px 14px;margin-bottom:12px}
+
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:6px;align-items:start}
+.w{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid transparent;border-radius:12px;padding:10px 12px;transition:background .15s,border-color .15s}
+.w:hover{background:var(--card-h);border-color:var(--line)}
+.av{width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:700;font-size:11px;color:rgba(255,255,255,.92);text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.info{min-width:0;flex:1}
+.name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.addr{display:inline-flex;align-items:center;gap:6px;color:var(--mute);font-size:12px;font-variant-numeric:tabular-nums;padding:1px 0;border-radius:6px}
+.addr:hover{color:var(--text)}
+.addr svg{width:13px;height:13px}
+.val{text-align:right;font-variant-numeric:tabular-nums}
+.bal{font-size:15px;font-weight:650;letter-spacing:-.01em}
+.chg{font-size:12px;font-weight:550}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--mute)}
+.err{color:var(--warn);font-size:12.5px;text-align:right}
+.err button{color:var(--accent);margin-left:6px;text-decoration:underline}
+.sk{display:block;height:12px;border-radius:6px;background:linear-gradient(90deg,var(--line),#343b50,var(--line));background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+
+.w{flex-wrap:wrap;cursor:pointer}
+.w .chev{width:16px;height:16px;margin-left:10px;color:var(--mute);transition:transform .15s}
+.w.open .chev{transform:rotate(180deg)}
+.w .val{display:flex;align-items:center}
+.w .vv{text-align:right}
+.det{flex-basis:100%;border-top:1px solid var(--line);margin-top:2px;padding-top:8px;display:grid;gap:5px;font-size:12px;color:var(--mute);cursor:default}
+.det .r{display:flex;justify-content:space-between;gap:12px}
+.det .r b{color:var(--text);font-weight:550;font-variant-numeric:tabular-nums}
+.det .sep{height:1px;background:var(--line);margin:2px 0}
+.sub{font-size:11.5px;color:var(--mute)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;margin-bottom:12px}
+.kpi{background:var(--card);border-radius:12px;padding:12px 14px}
+.kpi small{color:var(--mute)}
+.kpi .v{font-size:18px;font-weight:650;margin-top:2px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.kpi .n{font-size:11px;color:var(--mute);min-height:14px}
+.chart{background:var(--card);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.tabs{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.tab{padding:4px 10px;border-radius:7px;color:var(--mute)}
+.tab.on{background:var(--accent-bg);color:var(--accent)}
+.raw{overflow-x:auto;margin-top:10px}
+.raw table{border-collapse:collapse;font-size:12px}
+.raw td{border:1px solid var(--line);padding:3px 8px;white-space:nowrap}
+.stub{text-align:center;padding:80px 20px;color:var(--mute)}
+.stub svg{width:40px;height:40px;margin-bottom:12px;opacity:.6}
+.stub h2{color:var(--text);font-size:18px;margin-bottom:6px}
+
+@media(max-width:760px){
+  .app{grid-template-columns:1fr}
+  .sidebar{position:fixed;inset:auto 0 0 0;height:auto;z-index:10;flex-direction:row;border-right:0;border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+  .brand{display:none}
+  .nav{flex-direction:row;flex:1;justify-content:space-around;overflow-x:auto}
+  .nav button{flex-direction:column;gap:2px;font-size:11px;padding:6px 10px}
+  .nav .soon{display:none}
+  .main{padding:calc(20px + env(safe-area-inset-top,0px)) 14px calc(96px + env(safe-area-inset-bottom,0px))}
+  .upd{width:100%;margin:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><i></i>Dashboard</div>
+    <nav class="nav" id="nav" aria-label="Разделы"></nav>
+  </aside>
+  <main class="main"><div class="page" id="view"></div></main>
+</div>
+
+<script>
+/* ============ Настройки ============ */
+// Кошельки: строка-адрес или { address, name }. Без имени будет «Wallet N».
+const WALLETS = [
+  "0x46e2a49e5424350EA7F25897b4b8F10fE96456e0",
+  "0xd633b379eBCa6822E43882732C3A8fb906e001c3",
+  "0x79C2d9e9b27b93d32659d703453443760Fdcc9A2",
+  "0x0aEE87C97364F23Cd3d278Fb51692eb71e6E8181",
+  "0xfBc69cC1F1B7cF538BdF0E675fCaD06ff3311BcE",
+  "0x0Bf24432336110A3586036Af7b22ae8dcF29494C",
+  "0xd8375eB389a0c5F8306A6aF2f50B3f4226ffC99e",
+  "0x784Ec34E3494D1755725769022b91c32D12E08CD",
+  "0x20ee21a87E907c490B6742204Dd3a45450024284",
+  "0xAa513f0a33A056E21E81D9CF67c4781f4D00c990",
+  "0x4E73fbd1f5dF3e67F7DBd0A3618AA5be967B1f4d",
+  "0xDE27eFdd782b6eCcB45cfc6ce429cB073E60375F",
+  "0xD766A9DF477d22666db119CA46646f3d1eB99Bb2",
+  "0x9224e79c785Fa4b8d090bc5099d5ea3eB29Ff901",
+  "0x78bbf482298a851Ca06Acda990ff2F48421aD0F7",
+  "0x21879Aa08853F0daDd5cd5781F3D7CefFE84BD71",
+  "0xa5a2876Cb662CFA1620F56e885b53cC864602e3b",
+  "0xD45C283911Ac1af93A82FB5aF6fb8bF364c90524",
+  "0x95ab8cfa646b4696aF2f6D859E0a3952dcA0FaC9",
+  "0xd4044dd3cED3299170fa251Fd32cA9c95054Dc80",
+  "0xa7338ceEBF32714Fe279De238F21a0927E619CB7",
+  "0xE0D5A75b9D203E242aD29864a2Ee22375dC054A9",
+  "0x83C3807606234Ca17Ee6050d074ac75fEe9f1eA1",
+  "0xB33aBDb6B7BBe912630339A18c99702C50Da93dE",
+  "0x9ACBE2dA9356e3c1f613b0bd05cC26F54c8322Ee",
+  "0xe98614605FBe131451DE220fbA3a0401EAB297b5",
+  "0x3EB6063daBA0627d5870B533f813c8877D933D79",
+  "0xfff9AFE23d6E3577Cb863751DE8d22795f76C172",
+  "0x52789fB0efe2b6721267e7308AB2d61A30f65b60",
+];
+// Sui-кошельки: строка-адрес или { address, name }
+const SUI_WALLETS = [
+  "0x2dcc837aab6ab672a2b5cc9c4c3a91e9fb35084f789046fab28e11d97b51ac54",
+  "0x99cfe99e69f70182df90056e4df3071c6a15a01c6d640a53650007bcd6f336a3",
+  "0xa8612ffec7c8f35ab8eb82a003735461be5615aba90d9e35bfe71468b3584da8",
+  "0x22220c1325c9f92b7b54a60d9aa4e890dc813afeb424b28796f64a418fd0149a",
+  "0x4a47d650f9863a85b21e1799a4d7e1ed4191533a6d2e4a56493d28524ededc46",
+  "0x4a3c059b338a5ed4666b6588a6263bb0563e8b81db2fe451cdfa585aa79f606e",
+  "0xc8f4c4d8e7e48efea7ca789f9a7e2dafb28f543e9fcf1090b3c1936e1f9a0bd6",
+  "0xaba3a96ac8668f103e7372983797b61c60de5a784da62637a82a4a1901dd5029",
+  "0x3e6f78e77a8edc19496ddd466651a9c89aac1409ba7c46985a672224eba4ccc1",
+  "0x26851297a93e229571b410c7672dc7905fa496ab58a21c671bf53e74cc6ce3a5",
+  "0x1b76cf79416780db747121a5136915c61f6943d6ed6eefb86660d0b90ae579d7",
+  "0x519428925e3490c5cce9302d8b4f300654744e7d9bf841cf4e71d90abecd68ad",
+  "0x43489fcc8b3629bf28e7a523ec00c756a0b133519cd0586b3f58542270cba779",
+  "0x46fda86eaf326085a059e45f59cc164d522f240188b996574a1ff30060be65d6",
+  "0x3bc2947715e429a6a28408cb4cf2d6ba6b88d4faa4b5f8557b64e43dbba57645",
+  "0x779884752fcd2c0c2720511113a585cc09e581ac1eef906c65188fd87e6875f6",
+  "0x1a41e998dc7dffec9c85b3d84c8ac1308d57886e6b43fe20b987bce29cee9e05",
+  "0x42bf8f7db74cce4520e22a0bec91509750050361013d905c2d52402ce6d4e2c7",
+  "0x5d5a4d085ed0ed25b0bc71daf80d7ad77455a65dc8816f2d93a3439a35909c10",
+  "0x73349940aadd66e0722e44a222706407ed9fcc3b8a6fa98c92a6fc4346c51ca3",
+  "0x24852c983a7a036fd460fb4e78b9e78361ffed2859e3fe2256e7f2271515d916",
+  "0x0a228f524d8d8e98d08ef04daa96e33f4a96ab9fed84a1216bc66c4644d404ad",
+  "0x4a655c4f82d85d8e6e05988f3cb4c539c23bb883655cce6d87141fe2d6f3048f",
+  "0x40b6e100515c8ab0943074d83671151313f1d924fa0534921c7a8553efe16562",
+  "0xb3927ff491ebca0f181243bcca9a83758c7c5e9fa80b00820f464006d3ec917c",
+  "0xfef9caae0b844c0c32d1822f774dd733bb0fe7e4aeeebbc496aba35c10d92a30",
+  "0x54f429aa8c748a9a2ec362658d8cc67aad4fe523b6bcf4ce0934fb043ca59a56",
+  "0x5365bbe736e4be19d35f6e0ec501bcd51422d509e98decb8706e454c8d19aa80",
+  "0xff7f08baf5cce6a13f87e343cbffdf7c90baf40e6ce2349b68c63d92fabe4058",
+  "0x5d1ebf0ea6d0f3bb2060cee288dcfd6b259e242eb9ccc13e73b29531b9c729c3",
+  "0x18cdfe128fb8f7b8eda10de6ef524e171feabc384ea18f8cf8f6a98970ebf6f9",
+  "0x4f78da74d551c4675b51536db38acb8fbe3a79738043d05a83baa6792bfd7e1b",
+  "0x8db358c46d9b705a580860d8c85e83eac8f487d17e1815cbb176c14cafc3f024",
+  "0xf897a52137dc91d53cf4d8fa8a1bc4e971f5a5806b401305ae4025120a0af3ad",
+  "0xa6a4ba05db3efd6c4ab8c0affe916860a83bbf5e87a69d17a67fb9ac3252f516",
+  "0x5e2eff971332c749c666271cc7750bc766abd74cc9a63f14860cbb725a079051",
+  "0x6f2211a0adc56e471b01351fcd75ea35f844678d708a353c8ca1541b76f915b8",
+  "0xa3b2dce7e287abd234d7baba6043e6a54662ff445accaa53c69877388f95e65c",
+  "0xf03ab51431be47039ec61e98c9c3a87e6b6d0def6c737139752d06c6c146d53a",
+  "0x1061802e61d393d9dc8967306a19b6df6c646269583696dd75876a892916ba9c",
+  "0xfc37ce33544192dbb38560f12627fecf1f2b783470aac2ba6a80ac87421e09ab",
+  "0x9bf42b38eaaef510790c608cd07cbf0a63bc1e15360c5f2d68a1250a56dab0d7",
+  "0x6bf451d04be1c51a778510dfc2440497273df9fce20fe1ce0de3a8bb2d07d5df",
+  "0xa7751f65d9ad699da57d7d246cce716e60322d16acc66c3111c4aa7b6f799e71",
+  "0x2e882488be32aa9b2392ddb8da012534a75172998a0c13aaedabd15c19e1110f",
+  "0x835dd1d7af4ef0afc5025008482ca7c23583aa98e4cd8b7199a3870d3e531041",
+  "0xf817cb42723830dfb53dfa30c36566d770f888f36fc3467878a342a22126c565",
+  "0x080e1cbfd277ea176d060aa07dbfc6b8c6f9f01e29868c251357a1953195b187",
+  "0x5fb34edfed235c83cd6ea4f2678c9c802614ce7ffa637dcabcc16913d3076fdb",
+  "0x8234ba2f296a5e0efb0bcd86d953739bd9ec980928a3713abec28b8d0a48e4f5",
+  "0xc9127b306b02e6dbaf9716a5ed4fa5ab01bfc414434a3ed4c7331a77f27f6c9e",
+  "0x475b0c745042329bef2633a5a998878a424be427e87e32825d752b4236d967b4",
+  "0x87011ba464a11acd13de1357f50357f142cdb99fe37c6dfceb3079b1b6ae234e",
+  "0x493d5b06731d878a3aecb78cb22997633f33dbe8440ff191872481c67c666603",
+  "0x79366ba2bd4d1fc74f83c60ea9e614f0bc94db41693fcb96e52a592ac55d7399",
+  "0xc46ab7e383ed48dd4444f54aa0ea60ecf8ee8b5af1ffc001ba5618b0280f8426",
+  "0xeb1069ef9bb6f59c49e4a3bd027a69226e834ba850b82260803b6b16514e9db4",
+  "0x4e20ff70b179215ea1f4ab55e63d073a909f2ffd8235d4782d24c4e8801690d9",
+  "0x57276ef1afdaf70b1a80f6297c5baab8355262b02101dd66ccd3678d61499ace",
+];
+// Pythenians NFT: данные из Google Таблицы (доступ «Все, у кого есть ссылка — Читатель»)
+// sheet — название листа; gid — запасной вариант (число после gid= в адресной строке листа)
+const PYTH = { sheetId: "1y9v8iAwBQa8iIc4ll_PLtSzAu1v8ID7QomeGjXbgXaM", sheet: "PYTH.sheet", gid: "840475273" };
+const API = "https://api.hyperliquid.xyz/info";
+const CONCURRENCY = 5;
+
+/* ============ Утилиты ============ */
+const $ = (s, r = document) => r.querySelector(s);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+const fmtUsd = n => usd.format(n);
+const short = a => a.slice(0, 6) + "…" + a.slice(-4);
+const ico = {
+  wallet: '<svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h12v4"/><path d="M3 7v10a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M21 9H7a2 2 0 0 0 0 4h14z"/></svg>',
+  chart: '<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+  globe: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>',
+  refresh: '<svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
+  sort: '<svg viewBox="0 0 24 24"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3"/></svg>',
+  copy: '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>',
+  chev: '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>',
+  drop: '<svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
+  gem: '<svg viewBox="0 0 24 24"><path d="M6 4h12l4 5-10 11L2 9z"/><path d="M2 9h20M9 4l-2 5 5 11 5-11-2-5"/></svg>',
+  clock: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+};
+
+function avatar(addr) {
+  const h = parseInt(addr.slice(2, 10), 16), h2 = parseInt(addr.slice(10, 18), 16);
+  const a = h % 360, b = (a + 40 + (h2 % 120)) % 360;
+  return `<div class="av" style="background:linear-gradient(${h2 % 360}deg,hsl(${a} 70% 55%),hsl(${b} 75% 45%))">${addr.slice(2, 4).toUpperCase()}</div>`;
+}
+
+/* ============ Hyperliquid API ============ */
+async function post(body, tries = 3) {
+  for (let i = 0; i < tries; i++) {
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      if (r.status === 429) { await sleep(900 * (i + 1)); continue; }
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return await r.json();
+    } catch (e) {
+      if (i === tries - 1) throw e;
+      await sleep(400 * (i + 1));
+    }
+  }
+  throw new Error("Лимит запросов API");
+}
+
+// Цены спот-токенов в USD: берём пары с котировкой в USDC (токен №0)
+async function loadPrices() {
+  const [meta, mids] = await Promise.all([post({ type: "spotMeta" }), post({ type: "allMids" })]);
+  const price = { 0: 1 }, byName = {};
+  meta.tokens.forEach(t => byName[t.name] = t.index);
+  for (const u of meta.universe) {
+    if (u.tokens[1] !== 0) continue;
+    const p = parseFloat(mids[u.name]);
+    if (p && (price[u.tokens[0]] === undefined || u.isCanonical)) price[u.tokens[0]] = p;
+  }
+  return { price, byName };
+}
+
+/* Баланс кошелька = всё, что лежит на Hyperliquid:
+   perps + spot (по текущим ценам) + хранилища (vaults) + стейкинг HYPE.
+   Unified / Portfolio margin: все балансы живут в spot-аккаунте, поэтому
+   вместо accountValue перпов добавляем только нереализованный PnL позиций. */
+async function fetchWallet(address, px) {
+  const u = { user: address };
+  const [st, sp, ab, vl, dl, pf] = await Promise.allSettled([
+    post({ type: "clearinghouseState", ...u }),
+    post({ type: "spotClearinghouseState", ...u }),
+    post({ type: "userAbstraction", ...u }),
+    post({ type: "userVaultEquities", ...u }),
+    post({ type: "delegatorSummary", ...u }),
+    post({ type: "portfolio", ...u }),
+  ]);
+  for (const r of [st, sp, ab]) if (r.status === "rejected") throw r.reason;
+
+  const mode = typeof ab.value === "string" ? ab.value : "default";
+  const unified = mode === "unifiedAccount" || mode === "portfolioMargin";
+
+  const tokens = []; let spotUsd = 0;
+  for (const b of sp.value?.balances || []) {
+    const total = parseFloat(b.total);
+    if (!total) continue;
+    const pr = px.price[b.token], usd = pr ? total * pr : 0;
+    spotUsd += usd; tokens.push({ coin: b.coin, total, usd, noPrice: !pr });
+  }
+  tokens.sort((x, y) => y.usd - x.usd);
+
+  const perpsAcc = parseFloat(st.value?.marginSummary?.accountValue) || 0;
+  const upnl = (st.value?.assetPositions || []).reduce((s, a) => s + (parseFloat(a.position?.unrealizedPnl) || 0), 0);
+  const perps = unified ? upnl : perpsAcc;
+
+  const vaults = vl.status === "fulfilled" && Array.isArray(vl.value)
+    ? vl.value.reduce((s, v) => s + (parseFloat(v.equity) || 0), 0) : 0;
+
+  let staking = 0;
+  if (dl.status === "fulfilled" && dl.value) {
+    const hype = (parseFloat(dl.value.delegated) || 0) + (parseFloat(dl.value.undelegated) || 0) + (parseFloat(dl.value.totalPendingWithdrawal) || 0);
+    staking = hype * (px.price[px.byName.HYPE] || 0);
+  }
+
+  const parts = [
+    { label: unified ? "Perps (PnL позиций)" : "Perps", value: perps },
+    { label: "Spot", value: spotUsd },
+    { label: "Vaults", value: vaults },
+    { label: "Стейкинг HYPE", value: staking },
+  ];
+  const value = parts.reduce((s, x) => s + x.value, 0);
+
+  // Изменение за 24ч: PnL за период «day» / баланс на начало периода
+  let diff = null, pct = null;
+  if (pf.status === "fulfilled") {
+    const day = (pf.value || []).find(x => x[0] === "day")?.[1];
+    const av = day?.accountValueHistory, pnl = day?.pnlHistory;
+    if (av?.length) {
+      const start = +av[0][1], end = +av[av.length - 1][1];
+      diff = pnl?.length > 1 ? +pnl[pnl.length - 1][1] - +pnl[0][1] : end - start;
+      pct = start > 0 ? diff / start * 100 : null;
+    }
+  }
+  return { value, diff, pct, mode, parts, tokens };
+}
+
+/* ============ Модуль «Wallets» ============ */
+const Wallets = (() => {
+  const items = WALLETS.map((w, i) => {
+    const o = typeof w === "string" ? { address: w } : w;
+    return { address: o.address, name: o.name || "Wallet " + (i + 1), idx: i, status: "idle" };
+  });
+  const open = new Set();
+  const MODES = { default: "Standard", disabled: "Standard", dexAbstraction: "Standard", unifiedAccount: "Unified", portfolioMargin: "Portfolio margin" };
+  const NOPX = { price: { 0: 1 }, byName: {} };
+  let sort = "desc", loading = false, updated = null, root = null, raf = 0, px = null, pxOk = true;
+
+  async function getPrices() {
+    try { px = await loadPrices(); pxOk = true; } catch (e) { px = px || NOPX; pxOk = false; }
+  }
+  async function loadOne(it) {
+    it.status = "loading"; paint();
+    try { Object.assign(it, await fetchWallet(it.address, px || NOPX), { status: "ok", error: null }); }
+    catch (e) { it.status = "error"; it.error = e.message || "Ошибка"; }
+    paint();
+  }
+  async function refresh() {
+    if (loading) return;
+    loading = true; items.forEach(i => { if (i.status !== "ok") i.status = "loading"; });
+    paint();
+    await getPrices();
+    const queue = items.slice();
+    await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
+      while (queue.length) await loadOne(queue.shift());
+    }));
+    loading = false; updated = new Date(); paint();
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && root?.isConnected && updated && Date.now() - updated > 60000) refresh();
+  });
+  function paint() { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); }
+
+  function sorted() {
+    const a = items.slice();
+    if (sort === "desc") a.sort((x, y) => (y.value ?? -1) - (x.value ?? -1));
+    else if (sort === "asc") a.sort((x, y) => (x.value ?? Infinity) - (y.value ?? Infinity));
+    return a;
+  }
+  const sortLabel = () => ({ desc: "Сначала большие", asc: "Сначала малые", none: "Как в списке" }[sort]);
+  const num = new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 });
+
+  function details(it) {
+    const rows = it.parts.filter(x => Math.abs(x.value) >= 0.005)
+      .map(x => `<div class="r"><span>${x.label}</span><b>${fmtUsd(x.value)}</b></div>`).join("");
+    const toks = it.tokens.filter(t => t.usd >= 0.01 || t.noPrice).slice(0, 8)
+      .map(t => `<div class="r"><span>${esc(t.coin)} · ${num.format(t.total)}</span><b>${t.noPrice ? "нет цены" : fmtUsd(t.usd)}</b></div>`).join("");
+    return `<div class="det">${rows || '<div class="r"><span>На аккаунте пусто</span></div>'}
+      ${toks ? '<div class="sep"></div>' + toks : ""}
+      <div class="sep"></div><div class="r"><span>Режим аккаунта</span><b>${MODES[it.mode] || esc(it.mode)}</b></div></div>`;
+  }
+
+  function card(it) {
+    const isOpen = open.has(it.idx) && it.status === "ok";
+    let right;
+    if (it.status === "ok") {
+      const cls = it.pct == null ? "flat" : it.pct > 0.005 ? "up" : it.pct < -0.005 ? "down" : "flat";
+      const sign = it.pct > 0 ? "+" : "";
+      right = `<div class="vv"><div class="bal">${fmtUsd(it.value)}</div><div class="chg ${cls}">${it.pct == null ? "—" : sign + it.pct.toFixed(2) + "%"}</div></div>${ico.chev.replace("<svg", '<svg class="chev"')}`;
+    } else if (it.status === "error") {
+      right = `<div class="err">Не ответил<button data-retry="${it.idx}">Повторить</button></div>`;
+    } else {
+      right = `<div class="vv"><span class="sk" style="width:90px;margin-left:auto"></span><span class="sk" style="width:50px;margin:8px 0 0 auto"></span></div>`;
+    }
+    return `<div class="w${isOpen ? " open" : ""}" ${it.status === "ok" ? `data-toggle="${it.idx}" tabindex="0" role="button" aria-expanded="${isOpen}"` : ""}>${avatar(it.address)}
+      <div class="info"><div class="name">${esc(it.name)}</div>
+      <button class="addr" data-copy="${it.address}" title="Скопировать адрес">${short(it.address)}${ico.copy}</button></div>
+      <div class="val">${right}</div>${isOpen ? details(it) : ""}</div>`;
+  }
+
+  function draw() {
+    if (!root || !root.isConnected) return;
+    const ok = items.filter(i => i.status === "ok"), bad = items.filter(i => i.status === "error");
+    const total = ok.reduce((s, i) => s + i.value, 0);
+    const diff = ok.reduce((s, i) => s + (i.diff || 0), 0);
+    const base = total - diff, pct = base > 0 ? diff / base * 100 : null;
+    const cls = pct == null ? "flat" : pct >= 0 ? "up" : "down";
+    $("#w-total", root).innerHTML = ok.length
+      ? `<small>Общий баланс на Hyperliquid</small><div class="sum">${fmtUsd(total)}</div>
+         <div class="row"><span class="${cls}">${pct == null ? "—" : (diff >= 0 ? "+" : "−") + fmtUsd(Math.abs(diff)) + " · " + (pct >= 0 ? "+" : "") + pct.toFixed(2) + "%"} за 24ч</span><span>Загружено ${ok.length} из ${items.length}</span></div>`
+      : `<small>Общий баланс на Hyperliquid</small><div class="sum"><span class="sk" style="width:200px;height:34px"></span></div><div class="row"><span>Загружаем кошельки…</span></div>`;
+    $("#w-banner", root).innerHTML =
+      (bad.length && !loading ? `<div class="banner">Не удалось загрузить кошельков: ${bad.length}. Остальные показаны, итог посчитан без них.</div>` : "") +
+      (!pxOk && !loading ? `<div class="banner">Не удалось получить цены токенов: спот-токены кроме USDC не учтены в сумме.</div>` : "");
+    const rb = $("#w-refresh", root);
+    rb.disabled = loading; rb.classList.toggle("spin", loading);
+    $("#w-sort span", root).textContent = sortLabel();
+    $("#w-upd", root).textContent = updated ? "Обновлено в " + updated.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
+    $("#w-list", root).innerHTML = sorted().map(card).join("");
+  }
+
+  function toggle(i) { open.has(i) ? open.delete(i) : open.add(i); draw(); }
+
+  return {
+    render(el) {
+      root = el;
+      el.innerHTML = `
+        <div class="head"><h1>Hyperliquid Wallets</h1></div>
+        <div class="total" id="w-total"></div>
+        <div id="w-banner"></div>
+        <div class="bar">
+          <button class="btn primary" id="w-refresh">${ico.refresh}<span>Обновить</span></button>
+          <button class="btn" id="w-sort">${ico.sort}<span></span></button>
+          <span class="upd" id="w-upd"></span>
+        </div>
+        <div class="list" id="w-list"></div>`;
+      $("#w-refresh", el).onclick = refresh;
+      $("#w-sort", el).onclick = () => { sort = { desc: "asc", asc: "none", none: "desc" }[sort]; draw(); };
+      el.onclick = e => {
+        const c = e.target.closest("[data-copy]"), r = e.target.closest("[data-retry]");
+        if (c) {
+          navigator.clipboard?.writeText(c.dataset.copy).then(() => {
+            const t = c.innerHTML; c.textContent = "Скопировано"; setTimeout(() => c.innerHTML = t, 900);
+          });
+          return;
+        }
+        if (r) { (px ? Promise.resolve() : getPrices()).then(() => loadOne(items[+r.dataset.retry])).then(() => { updated = new Date(); paint(); }); return; }
+        const w = e.target.closest("[data-toggle]");
+        if (w && !e.target.closest(".det")) toggle(+w.dataset.toggle);
+      };
+      el.onkeydown = e => {
+        const w = e.target.closest?.("[data-toggle]");
+        if (w && w === e.target && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(+w.dataset.toggle); }
+      };
+      draw();
+      if (!updated && !loading) refresh();
+    },
+  };
+})();
+
+/* ============ Модуль «Sui Wallets» ============
+   Данные: публичный Sui GraphQL (JSON-RPC на mainnet отключён), цены: DeFiLlama. */
+const SuiWallets = (() => {
+  const GQL = "https://graphql.mainnet.sui.io/graphql", SUI = "0x2::sui::SUI";
+  const items = SUI_WALLETS.map((w, i) => {
+    const o = typeof w === "string" ? { address: w } : w;
+    return { address: o.address, name: o.name || "Sui " + (i + 1), idx: i, status: "idle" };
+  });
+  const open = new Set(), prices = {};
+  let sort = "desc", loading = false, updated = null, root = null, raf = 0;
+  const num = new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 });
+  const Q = a => `{ address(address: "${a}") {
+    balances { nodes { coinType { repr } totalBalance } }
+    objects(first: 50, filter: { type: "0x3::staking_pool::StakedSui" }) { nodes { contents { json } } } } }`;
+
+  async function gql(query, tries = 3) {
+    for (let i = 0; i < tries; i++) {
+      try {
+        const r = await fetch(GQL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query }) });
+        if (r.status === 429) { await sleep(900 * (i + 1)); continue; }
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const j = await r.json();
+        if (!j.data) throw new Error(j.errors?.[0]?.message || "Пустой ответ");
+        return j.data;
+      } catch (e) { if (i === tries - 1) throw e; await sleep(500 * (i + 1)); }
+    }
+    throw new Error("Лимит запросов API");
+  }
+  async function loadPrices(types) {
+    const need = [...new Set(types)].filter(t => !(t in prices));
+    for (let i = 0; i < need.length; i += 25) {
+      const chunk = need.slice(i, i + 25);
+      try {
+        const r = await fetch("https://coins.llama.fi/prices/current/" + chunk.map(t => encodeURIComponent("sui:" + t)).join(","));
+        const j = await r.json();
+        chunk.forEach(t => prices[t] = j.coins?.["sui:" + t] || null);
+      } catch (e) { /* повторим при следующем обновлении */ }
+    }
+    if (!prices[SUI]?.price) {
+      try {
+        const j = await (await fetch("https://api.coingecko.com/api/v3/simple/price?ids=sui&vs_currencies=usd")).json();
+        if (j.sui?.usd) prices[SUI] = { price: j.sui.usd, decimals: 9, symbol: "SUI" };
+      } catch (e) {}
+    }
+  }
+  function compute(it, raw) {
+    const tokens = []; let tokUsd = 0, hidden = 0;
+    for (const n of raw.balances?.nodes || []) {
+      const t = n.coinType?.repr, p = prices[t];
+      if (!p?.price) { hidden++; continue; }
+      const amt = Number(n.totalBalance) / 10 ** (p.decimals ?? 9), usd = amt * p.price;
+      tokUsd += usd; tokens.push({ sym: p.symbol || t.split("::").pop(), amt, usd });
+    }
+    tokens.sort((a, b) => b.usd - a.usd);
+    let staked = 0, nStakes = 0;
+    for (const o of raw.objects?.nodes || []) {
+      const pr = o.contents?.json?.principal;
+      staked += (Number(pr && typeof pr === "object" ? pr.value : pr) || 0) / 1e9; nStakes++;
+    }
+    const stakedUsd = staked * (prices[SUI]?.price || 0);
+    Object.assign(it, { status: "ok", error: null, value: tokUsd + stakedUsd, tokUsd, stakedUsd, staked, nStakes, tokens, hidden });
+  }
+  const getRaw = async it => (await gql(Q(it.address))).address || {};
+
+  async function refresh() {
+    if (loading) return;
+    loading = true; items.forEach(i => { if (i.status !== "ok") i.status = "loading"; }); paint();
+    const raws = [], queue = items.map((_, i) => i);
+    await Promise.all(Array.from({ length: 3 }, async () => {
+      while (queue.length) {
+        const i = queue.shift();
+        try { raws[i] = await getRaw(items[i]); } catch (e) { items[i].status = "error"; items[i].error = e.message; }
+        paint();
+      }
+    }));
+    await loadPrices([SUI, ...raws.flatMap(r => (r?.balances?.nodes || []).map(n => n.coinType?.repr).filter(Boolean))]);
+    items.forEach((it, i) => raws[i] && compute(it, raws[i]));
+    loading = false; updated = new Date(); paint();
+  }
+  async function retry(it) {
+    it.status = "loading"; paint();
+    try {
+      const raw = await getRaw(it);
+      await loadPrices([SUI, ...(raw.balances?.nodes || []).map(n => n.coinType?.repr).filter(Boolean)]);
+      compute(it, raw);
+    } catch (e) { it.status = "error"; it.error = e.message; }
+    updated = new Date(); paint();
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && root?.isConnected && updated && Date.now() - updated > 60000) refresh();
+  });
+  function paint() { cancelAnimationFrame(raf); raf = requestAnimationFrame(draw); }
+  function sorted() {
+    const a = items.slice();
+    if (sort === "desc") a.sort((x, y) => (y.value ?? -1) - (x.value ?? -1));
+    else if (sort === "asc") a.sort((x, y) => (x.value ?? Infinity) - (y.value ?? Infinity));
+    return a;
+  }
+  const sortLabel = () => ({ desc: "Сначала большие", asc: "Сначала малые", none: "Как в списке" }[sort]);
+
+  function details(it) {
+    const r = (a, b) => `<div class="r"><span>${a}</span><b>${b}</b></div>`;
+    let h = r("Токены", fmtUsd(it.tokUsd));
+    if (it.nStakes) h += r(`Стейкинг SUI · ${it.nStakes} поз.`, `${num.format(it.staked)} SUI · ${fmtUsd(it.stakedUsd)}`);
+    const toks = it.tokens.filter(t => t.usd >= 0.01).slice(0, 10).map(t => r(`${esc(t.sym)} · ${num.format(t.amt)}`, fmtUsd(t.usd))).join("");
+    if (toks) h += '<div class="sep"></div>' + toks;
+    if (it.hidden) h += '<div class="sep"></div>' + r("Токены без цены (не в сумме)", it.hidden);
+    return `<div class="det">${h}</div>`;
+  }
+  function card(it) {
+    const isOpen = open.has(it.idx) && it.status === "ok";
+    let right;
+    if (it.status === "ok") {
+      right = `<div class="vv"><div class="bal">${fmtUsd(it.value)}</div><div class="sub">${it.stakedUsd >= 0.5 ? "стейк " + fmtUsd(it.stakedUsd) : "&nbsp;"}</div></div>${ico.chev.replace("<svg", '<svg class="chev"')}`;
+    } else if (it.status === "error") {
+      right = `<div class="err">Не ответил<button data-retry="${it.idx}">Повторить</button></div>`;
+    } else {
+      right = `<div class="vv"><span class="sk" style="width:80px;margin-left:auto"></span><span class="sk" style="width:46px;margin:7px 0 0 auto"></span></div>`;
+    }
+    return `<div class="w${isOpen ? " open" : ""}" ${it.status === "ok" ? `data-toggle="${it.idx}" tabindex="0" role="button" aria-expanded="${isOpen}"` : ""}>${avatar(it.address.slice(0, 10) + it.address.slice(-8))}
+      <div class="info"><div class="name">${esc(it.name)}</div>
+      <button class="addr" data-copy="${it.address}" title="Скопировать адрес">${short(it.address)}${ico.copy}</button></div>
+      <div class="val">${right}</div>${isOpen ? details(it) : ""}</div>`;
+  }
+  function draw() {
+    if (!root || !root.isConnected) return;
+    const ok = items.filter(i => i.status === "ok"), bad = items.filter(i => i.status === "error");
+    const sum = k => ok.reduce((s, i) => s + i[k], 0);
+    $("#s-total", root).innerHTML = ok.length
+      ? `<small>Общий баланс на Sui</small><div class="sum">${fmtUsd(sum("value"))}</div>
+         <div class="row"><span>Токены ${fmtUsd(sum("tokUsd"))}</span><span>Стейкинг ${fmtUsd(sum("stakedUsd"))}</span><span>Загружено ${ok.length} из ${items.length}</span></div>`
+      : `<small>Общий баланс на Sui</small><div class="sum"><span class="sk" style="width:180px;height:28px"></span></div><div class="row"><span>Загружаем кошельки…</span></div>`;
+    $("#s-banner", root).innerHTML =
+      (bad.length && !loading ? `<div class="banner">Не удалось загрузить кошельков: ${bad.length}. Итог посчитан без них.</div>` : "") +
+      (!prices[SUI]?.price && !loading && updated ? `<div class="banner">Не удалось получить цену SUI: суммы могут быть занижены.</div>` : "");
+    const rb = $("#s-refresh", root);
+    rb.disabled = loading; rb.classList.toggle("spin", loading);
+    $("#s-sort span", root).textContent = sortLabel();
+    $("#s-upd", root).textContent = updated ? "Обновлено в " + updated.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
+    $("#s-list", root).innerHTML = sorted().map(card).join("");
+  }
+  const toggle = i => { open.has(i) ? open.delete(i) : open.add(i); draw(); };
+  return {
+    render(el) {
+      root = el;
+      el.innerHTML = `
+        <div class="head"><h1>Sui Wallets</h1></div>
+        <div class="total" id="s-total"></div>
+        <div id="s-banner"></div>
+        <div class="bar">
+          <button class="btn primary" id="s-refresh">${ico.refresh}<span>Обновить</span></button>
+          <button class="btn" id="s-sort">${ico.sort}<span></span></button>
+          <span class="upd" id="s-upd"></span>
+        </div>
+        <div class="list" id="s-list"></div>`;
+      $("#s-refresh", el).onclick = refresh;
+      $("#s-sort", el).onclick = () => { sort = { desc: "asc", asc: "none", none: "desc" }[sort]; draw(); };
+      el.onclick = e => {
+        const c = e.target.closest("[data-copy]"), r = e.target.closest("[data-retry]");
+        if (c) { navigator.clipboard?.writeText(c.dataset.copy).then(() => { const t = c.innerHTML; c.textContent = "Скопировано"; setTimeout(() => c.innerHTML = t, 900); }); return; }
+        if (r) { retry(items[+r.dataset.retry]); return; }
+        const w = e.target.closest("[data-toggle]");
+        if (w && !e.target.closest(".det")) toggle(+w.dataset.toggle);
+      };
+      el.onkeydown = e => {
+        const w = e.target.closest?.("[data-toggle]");
+        if (w && w === e.target && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(+w.dataset.toggle); }
+      };
+      draw();
+      if (!updated && !loading) refresh();
+    },
+  };
+})();
+
+/* ============ Модуль «Pythenians» ============
+   Читает лист из Google Таблицы (CSV через gviz) и сам находит нужные показатели по названиям колонок/строк. */
+const Pythenians = (() => {
+  const LABELS = { qty: "Количество NFT", buy: "Цена покупки", floor: "Floor", solPrice: "Цена SOL", pnlSol: "P&L", pnlUsd: "P&L", valueUsd: "Стоимость всех NFT" };
+  function classify(text) {
+    const t = String(text).toLowerCase().trim();
+    if (!t || t.length > 60) return null;
+    if (/p\s*&?\s*l\b|pnl|прибыл|профит/.test(t)) return /\$|usd|доллар/.test(t) ? "pnlUsd" : /sol/.test(t) ? "pnlSol" : null;
+    if (/покуп|buy|bought|purchase/.test(t)) return "buy";
+    if (/floor|флор/.test(t)) return "floor";
+    if (/стоимост|value|total|итого|worth/.test(t) && /\$|usd|доллар/.test(t)) return "valueUsd";
+    if (/sol/.test(t) && /цен|price|курс/.test(t)) return "solPrice";
+    if (/колич|кол-во|qty|quantity|amount|count|^шт/.test(t)) return "qty";
+    if (/^(дата|date|day|время|time)/.test(t)) return "date";
+    return null;
+  }
+  function parseCSV(t) {
+    const rows = []; let r = [], c = "", q = false;
+    for (let i = 0; i < t.length; i++) {
+      const ch = t[i];
+      if (q) { if (ch === '"') { if (t[i + 1] === '"') { c += '"'; i++; } else q = false; } else c += ch; }
+      else if (ch === '"') q = true;
+      else if (ch === ",") { r.push(c); c = ""; }
+      else if (ch === "\n" || ch === "\r") { if (ch === "\r" && t[i + 1] === "\n") i++; r.push(c); rows.push(r); r = []; c = ""; }
+      else c += ch;
+    }
+    if (c !== "" || r.length) { r.push(c); rows.push(r); }
+    return rows;
+  }
+  function parseNum(s) {
+    if (s == null) return null;
+    let t = String(s).trim().replace(/[\s\u00a0$€₽◎%]|sol|usd/gi, "").replace(/^\+/, "").replace(/[−–]/g, "-");
+    if (!t || t === "-") return null;
+    t = t.replace(/^\((.*)\)$/, "-$1");
+    const hasC = t.includes(","), hasD = t.includes(".");
+    if (hasC && hasD) t = t.lastIndexOf(",") > t.lastIndexOf(".") ? t.replace(/\./g, "").replace(",", ".") : t.replace(/,/g, "");
+    else if (hasC) t = /,\d{1,2}$/.test(t) && t.split(",").length === 2 ? t.replace(",", ".") : t.replace(/,/g, "");
+    return /^-?\d*\.?\d+(e-?\d+)?$/i.test(t) ? parseFloat(t) : null;
+  }
+  const toTs = s => {
+    const m = /^(\d{1,2})[./](\d{1,2})[./](\d{2,4})$/.exec((s || "").trim());
+    if (m) return Date.UTC(+m[3] < 100 ? 2000 + +m[3] : +m[3], m[2] - 1, m[1]);
+    const t = Date.parse(s); return isNaN(t) ? null : t;
+  };
+  function extract(rows) {
+    const cls = rows.map(r => r.map(c => classify(c || "")));
+    let hi = -1, best = 0;
+    cls.forEach((r, i) => { const n = new Set(r.filter(Boolean)).size; if (n > best) { best = n; hi = i; } });
+    if (best >= 3) {                                   // режим «таблица»: шапка + строки
+      const cols = {}; cls[hi].forEach((k, j) => { if (k && !(k in cols)) cols[k] = j; });
+      const data = [];
+      for (let i = hi + 1; i < rows.length; i++) {
+        const rec = {}; let any = false;
+        for (const k in cols) {
+          if (k === "date") { rec.date = (rows[i][cols[k]] || "").trim(); continue; }
+          const v = parseNum(rows[i][cols[k]]); if (v != null) { rec[k] = v; any = true; }
+        }
+        if (any) data.push(rec);
+      }
+      if (data.length) return data;
+    }
+    const rec = {};                                    // режим «название — значение»
+    rows.forEach((r, i) => r.forEach((c, j) => {
+      const k = cls[i][j]; if (!k || k === "date" || k in rec) return;
+      let v = null; for (let d = 1; d <= 3 && v == null; d++) v = parseNum(r[j + d]);
+      if (v == null) v = parseNum(rows[i + 1]?.[j]);
+      if (v != null) rec[k] = v;
+    }));
+    return Object.keys(rec).length ? [rec] : null;
+  }
+  function derive(r) {
+    const o = { ...r, calc: {} };
+    if (o.valueUsd == null && o.qty != null && o.floor != null && o.solPrice != null) { o.valueUsd = o.qty * o.floor * o.solPrice; o.calc.valueUsd = 1; }
+    if (o.pnlSol == null && o.qty != null && o.floor != null && o.buy != null) { o.pnlSol = o.qty * (o.floor - o.buy); o.calc.pnlSol = 1; }
+    if (o.pnlUsd == null && o.pnlSol != null && o.solPrice != null) { o.pnlUsd = o.pnlSol * o.solPrice; o.calc.pnlUsd = 1; }
+    if (o.qty != null && o.buy != null) {
+      let cost = o.qty * o.buy;
+      if (o.pnlSol != null && o.floor != null && Math.abs(o.pnlSol - (o.qty * o.floor - o.buy)) < Math.abs(o.pnlSol - (o.qty * o.floor - o.qty * o.buy))) cost = o.buy;
+      if (o.pnlSol != null && cost > 0) o.pct = o.pnlSol / cost * 100;
+    }
+    return o;
+  }
+
+  let rows = null, data = null, error = null, loading = false, updated = null, root = null, metric = "pnlUsd", showRaw = false;
+  const n4 = new Intl.NumberFormat("en-US", { maximumFractionDigits: 4 });
+  const n0 = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
+  const METRICS = { pnlUsd: ["P&L $", fmtUsd], pnlSol: ["P&L SOL", v => n4.format(v) + " SOL"], valueUsd: ["Стоимость $", fmtUsd], floor: ["Floor", v => n4.format(v) + " SOL"] };
+
+  async function refresh() {
+    if (loading) return;
+    loading = true; error = null; draw();
+    try {
+      const base = `https://docs.google.com/spreadsheets/d/${PYTH.sheetId}/gviz/tq?tqx=out:csv`;
+      const urls = [base + "&sheet=" + encodeURIComponent(PYTH.sheet), PYTH.gid ? base + "&gid=" + PYTH.gid : null].filter(Boolean);
+      let d = null, lastErr = null;
+      for (const url of urls) {
+        try {
+          const r = await fetch(url);
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          const t = await r.text();
+          if (t.trimStart().startsWith("<")) throw new Error("закрыт доступ");
+          const rr = parseCSV(t), dd = extract(rr);
+          if (!rows) rows = rr;
+          if (dd) { rows = rr; d = dd; break; }
+          lastErr = new Error("no-match");
+        } catch (e) { lastErr = e; }
+      }
+      if (!d) throw lastErr || new Error("no-match");
+      if (d.every(x => x.date != null && toTs(x.date) != null)) d.sort((a, b) => toTs(a.date) - toTs(b.date));
+      data = d.map(derive); updated = new Date();
+    } catch (e) {
+      error = e.message === "no-match"
+        ? "Лист загружен, но я не нашёл в нём нужные названия (Количество, Цена покупки, Floor, P&L…). Откройте «Показать данные листа» и напишите мне, как они выглядят."
+        : "Не удалось прочитать таблицу. Откройте доступ: Поделиться → «Все, у кого есть ссылка» → Читатель. Также проверьте, что лист называется «" + PYTH.sheet + "».";
+    }
+    loading = false; draw();
+  }
+
+  function chart(series, key) {
+    const pts = series.map(d => d[key]).filter(v => v != null);
+    if (pts.length < 2) return "";
+    const W = 600, H = 150, pad = 6, min = Math.min(...pts), max = Math.max(...pts), span = max - min || 1;
+    const xy = pts.map((v, i) => [pad + i * (W - 2 * pad) / (pts.length - 1), H - pad - (v - min) / span * (H - 2 * pad)]);
+    const line = xy.map(a => a.join(",")).join(" ");
+    const f = METRICS[key][1];
+    return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;stroke:none" preserveAspectRatio="none">
+      <polygon points="${pad},${H} ${line} ${W - pad},${H}" fill="rgba(112,132,255,.14)"/>
+      <polyline points="${line}" fill="none" stroke="#7084ff" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>
+      <div class="row" style="display:flex;justify-content:space-between;color:var(--mute);font-size:11.5px"><span>мин ${f(min)}</span><span>сейчас ${f(pts[pts.length - 1])}</span><span>макс ${f(max)}</span></div>`;
+  }
+
+  function draw() {
+    if (!root || !root.isConnected) return;
+    const rb = $("#p-refresh", root); rb.disabled = loading; rb.classList.toggle("spin", loading);
+    $("#p-upd", root).textContent = updated ? "Обновлено в " + updated.toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
+    const body = $("#p-body", root);
+    if (error) { body.innerHTML = `<div class="banner">${esc(error)}</div>${rawBlock()}`; return; }
+    if (!data) { body.innerHTML = `<div class="kpis">${Array(7).fill('<div class="kpi"><span class="sk" style="width:70px"></span><span class="sk" style="width:110px;height:18px;margin-top:8px"></span></div>').join("")}</div>`; return; }
+    const d = data[data.length - 1];
+    const sgn = v => v == null ? "flat" : v > 0 ? "up" : v < 0 ? "down" : "flat";
+    const plus = v => (v > 0 ? "+" : "");
+    const kpi = (label, val, cls, note) => `<div class="kpi"><small>${label}</small><div class="v ${cls || ""}">${val}</div><div class="n">${note || ""}</div></div>`;
+    const calc = k => d.calc[k] ? "расчёт" : "";
+    const cards =
+      kpi("Количество NFT", d.qty != null ? n0.format(d.qty) : "—") +
+      kpi("Цена покупки", d.buy != null ? n4.format(d.buy) + " SOL" : "—") +
+      kpi("Текущий floor", d.floor != null ? n4.format(d.floor) + " SOL" : "—") +
+      kpi("Текущая цена SOL", d.solPrice != null ? fmtUsd(d.solPrice) : "—") +
+      kpi("P&L SOL", d.pnlSol != null ? plus(d.pnlSol) + n4.format(d.pnlSol) + " SOL" : "—", sgn(d.pnlSol), d.pct != null ? plus(d.pct) + d.pct.toFixed(1) + "%" + (calc("pnlSol") ? " · расчёт" : "") : calc("pnlSol")) +
+      kpi("P&L $", d.pnlUsd != null ? plus(d.pnlUsd) + fmtUsd(d.pnlUsd) : "—", sgn(d.pnlUsd), calc("pnlUsd")) +
+      kpi("Стоимость всех NFT", d.valueUsd != null ? fmtUsd(d.valueUsd) : "—", "", calc("valueUsd"));
+    const avail = Object.keys(METRICS).filter(k => data.filter(x => x[k] != null).length >= 2);
+    if (avail.length && !avail.includes(metric)) metric = avail[0];
+    const ch = avail.length ? `<div class="chart"><div class="tabs">${avail.map(k => `<button class="tab${k === metric ? " on" : ""}" data-m="${k}">${METRICS[k][0]}</button>`).join("")}</div>${chart(data, metric)}</div>` : "";
+    body.innerHTML = `<div class="kpis">${cards}</div>${ch}${data.length > 1 ? `<div class="sub" style="margin-bottom:6px">Точек в истории: ${data.length}</div>` : ""}${rawBlock()}`;
+  }
+  function rawBlock() {
+    if (!rows) return "";
+    return `<button class="btn" data-raw="1">${showRaw ? "Скрыть" : "Показать"} данные листа</button>` +
+      (showRaw ? `<div class="raw"><table>${rows.slice(0, 60).map(r => "<tr>" + r.map(c => `<td>${esc(c)}</td>`).join("") + "</tr>").join("")}</table></div>` : "");
+  }
+  return {
+    render(el) {
+      root = el;
+      el.innerHTML = `
+        <div class="head"><h1>Pythenians NFT</h1></div>
+        <div class="bar">
+          <button class="btn primary" id="p-refresh">${ico.refresh}<span>Обновить</span></button>
+          <span class="upd" id="p-upd"></span>
+        </div>
+        <div id="p-body"></div>`;
+      $("#p-refresh", el).onclick = refresh;
+      el.onclick = e => {
+        const m = e.target.closest("[data-m]"), r = e.target.closest("[data-raw]");
+        if (m) { metric = m.dataset.m; draw(); }
+        if (r) { showRaw = !showRaw; draw(); }
+      };
+      draw();
+      if (!data && !loading && !error) refresh();
+    },
+  };
+})();
+
+/* ============ Реестр модулей ============
+   Чтобы добавить раздел: допишите объект в MODULES.
+   render(container) — отрисовывает содержимое; без render показывается заглушка «Скоро». */
+const MODULES = [
+  { id: "wallets", title: "Hyperliquid", icon: ico.wallet, render: el => Wallets.render(el) },
+  { id: "sui", title: "Sui Wallets", icon: ico.drop, render: el => SuiWallets.render(el) },
+  { id: "pythenians", title: "Pythenians", icon: ico.gem, render: el => Pythenians.render(el) },
+  { id: "stats", title: "Статистика", icon: ico.chart },
+  { id: "protocols", title: "Протоколы", icon: ico.globe },
+];
+
+/* ============ Роутер ============ */
+const nav = $("#nav"), view = $("#view");
+nav.innerHTML = MODULES.map(m =>
+  `<button data-id="${m.id}">${m.icon}<span>${esc(m.title)}</span>${m.render ? "" : '<em class="soon" style="font-style:normal">Скоро</em>'}</button>`).join("");
+nav.onclick = e => { const b = e.target.closest("button"); if (b) location.hash = b.dataset.id; };
+
+function route() {
+  const m = MODULES.find(x => x.id === location.hash.slice(1)) || MODULES[0];
+  nav.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.id === m.id));
+  document.title = m.title + " · Dashboard";
+  if (m.render) m.render(view);
+  else view.innerHTML = `<div class="stub">${ico.clock}<h2>${esc(m.title)}</h2><p>Этот раздел скоро появится.</p></div>`;
+}
+addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
